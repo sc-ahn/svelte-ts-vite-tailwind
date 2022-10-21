@@ -9,5 +9,6 @@ export default defineConfig({
   },
   plugins: [svelte({
     /* plugin options */
-  })]
+  })],
+  base: "/svelte-tsvite-tailwind/",
 })
