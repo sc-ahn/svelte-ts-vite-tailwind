@@ -1,6 +1,6 @@
 <script>
+  import { joinBase } from '../utils'
   export let id;
-
   const urlParams = new URLSearchParams(window.location.search);
   const isNameExist = urlParams.has('name');
   const array = ['Anthony', 'John', 'Jane'];
@@ -18,13 +18,13 @@
         <p>you can use path parameter [:id] as 123  >>  </p>
       </div>
       <div class="margin-around margin-vertical text-amber-200">
-        <a href="/test/123" class="text-amber-200">Go to "test/123"</a>
+        <a href="{joinBase('/test/123')}" class="text-amber-200">Go to "test/123"</a>
       </div>
       <div class="margin-around">
         <p>you can use Query parameter [name] as yours  >>  </p>
       </div>
       <div class="margin-around margin-vertical text-amber-200">
-        <a href="/test?name=Anthony" class="text-amber-200">Go to "test?name=Anthony"</a>
+        <a href="{joinBase('/test?name=Anthony')}" class="text-amber-200">Go to "test?name=Anthony"</a>
       </div>
     {/if}
   {/if}
