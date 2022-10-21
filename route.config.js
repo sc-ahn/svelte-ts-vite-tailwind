@@ -1,1 +1,1 @@
-export const base = "svelte-ts-vite-tailwind"
+export const base = "/"

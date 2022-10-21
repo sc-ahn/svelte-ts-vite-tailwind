@@ -1,6 +1,9 @@
 import { base } from '../route.config'
 
 export const joinBase = (path: string) => {
+  if (path == "/") {
+    return path
+  }
   const pathWithoutLeadingSlash = path.replace(/^\//, '')
   return `/${base}/${pathWithoutLeadingSlash}`
 }

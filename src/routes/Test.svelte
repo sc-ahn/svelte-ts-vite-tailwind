@@ -1,5 +1,5 @@
 <script>
-  import { joinBase } from '../utils'
+  import { Link } from 'svelte-routing';
   export let id;
   const urlParams = new URLSearchParams(window.location.search);
   const isNameExist = urlParams.has('name');
@@ -18,13 +18,13 @@
         <p>you can use path parameter [:id] as 123  >>  </p>
       </div>
       <div class="margin-around margin-vertical text-amber-200">
-        <a href="{joinBase('/test/123')}" class="text-amber-200">Go to "test/123"</a>
+        <Link to="test/123">Go to "test/123"</Link>
       </div>
       <div class="margin-around">
         <p>you can use Query parameter [name] as yours  >>  </p>
       </div>
       <div class="margin-around margin-vertical text-amber-200">
-        <a href="{joinBase('/test?name=Anthony')}" class="text-amber-200">Go to "test?name=Anthony"</a>
+        <a href="/test?name=Anthony">Go to "test?name=Anthony"</a>
       </div>
     {/if}
   {/if}
